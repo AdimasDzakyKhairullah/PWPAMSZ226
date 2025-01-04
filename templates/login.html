@@ -1,0 +1,41 @@
+{% extends "intibase.html" %}
+
+{% block content %}
+<div class="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-black py-8 px-4">
+    <div class="max-w-md mx-auto bg-white/5 backdrop-blur-md border border-emerald-300/20 p-8 rounded-2xl shadow-2xl mt-20">
+        <h2 class="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-300 flex items-center">
+            <svg class="w-10 h-10 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+            </svg>
+            Welcome Back!
+        </h2>
+        <form method="POST">
+            <div class="mb-5">
+                <label class="block text-emerald-200 text-sm font-bold mb-2" for="username">
+                    Username
+                </label>
+                <input class="bg-emerald-800/20 shadow-inner appearance-none border border-emerald-300/30 rounded-xl w-full py-3 px-4 text-emerald-100 leading-tight focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                       id="username" name="username" type="text" required>
+            </div>
+            <div class="mb-6">
+                <label class="block text-emerald-200 text-sm font-bold mb-2" for="password">
+                    Password
+                </label>
+                <input class="bg-emerald-800/20 shadow-inner appearance-none border border-emerald-300/30 rounded-xl w-full py-3 px-4 text-emerald-100 leading-tight focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                       id="password" name="password" type="password" required>
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white font-bold py-3 px-6 rounded-xl transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-emerald-500/50"
+                        type="submit">
+                    Sign in
+                </button>
+                <a class="inline-block align-baseline font-bold text-sm text-emerald-300 hover:text-emerald-100 transform hover:scale-105 transition duration-300"
+                   href="{{ url_for('register') }}">
+                    Register
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
